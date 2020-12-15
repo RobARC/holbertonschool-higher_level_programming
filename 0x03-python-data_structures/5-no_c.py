@@ -5,4 +5,4 @@ def no_c(my_string):
         if i == 'C' or i == 'c':
             continue
         mychr += i
-        return(mychr)
+    return(mychr)
