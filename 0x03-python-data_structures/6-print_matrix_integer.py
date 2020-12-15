@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
                 print('{:s}'.format(' '), end="")
                 count += 1
         count = 0
-        print("")
+        print()
