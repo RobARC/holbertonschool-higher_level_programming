@@ -9,4 +9,3 @@ def new_in_list(my_list, idx, element):
     if idx < 0 or idx > (lenght - 1):
         return my_list1
     return(my_list1)
-
