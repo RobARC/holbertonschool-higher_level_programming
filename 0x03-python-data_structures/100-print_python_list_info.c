@@ -25,6 +25,6 @@ size = Py_SIZE(p); /* access the ob_size member of a Python object    */
 	/*Return the object at position index in the list pointed to by list.*/
 	printf("Element %ld: %s\n", i, Py_TYPE(item)->tp_name);
 	/*print each element with it type */
-	}	
+	}
 }
 
