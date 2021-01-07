@@ -90,13 +90,15 @@ class SinglyLinkedList:
         Insert a new node in numerical orden
         """
 
+        NNode = Node(value, None)
+        if self.__head is None:
+            self.__head = NNode
+            return
+        elif value < self.__head.data:
+            NNode.next_node = self.__head
+            self.__head = NNode
+            return
         NNode = self.__head
-        if NNode is None:
-            self.__head = Node(value)
-            return
-        elif value < NNode.data:
-            self.__head = Node(value, NNode)
-            return
         while NNode:
             if not NNode.next_node:
                 NNode.next_node = Node(value)
