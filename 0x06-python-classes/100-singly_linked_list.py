@@ -91,9 +91,6 @@ class SinglyLinkedList:
         """
 
         NNode = self.__head
-        error2 = "data must be an integer"
-        if not isinstance(value, int):
-            raise TypeError(error2)
         if NNode is None:
             self.__head = Node(value)
             return
