@@ -77,6 +77,9 @@ class SinglyLinkedList:
         NNode = self.__head
         List = []
 
+        if self.__head is None:
+            return ""
+
         while NNode:
             List.append(str(NNode.data))
             NNode = NNode.next_node
