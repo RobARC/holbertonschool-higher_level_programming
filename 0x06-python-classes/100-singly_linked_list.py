@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Single Linked List module
+Contains functions to create a basic singly linked list
+"""
+
+
 class Node:
     """
     Define a Node of a single linked list
