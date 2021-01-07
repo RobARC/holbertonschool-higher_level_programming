@@ -52,7 +52,7 @@ class Node:
         """
 
         error1 = "next_node must be a Node object"
-        if value is not None and type(value) is not Node:
+        if type(value) is not Node and value is not None:
             raise TypeError(error1)
         self.__next_node = value
 
