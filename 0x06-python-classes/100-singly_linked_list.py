@@ -1,22 +1,30 @@
 #!/usr/bin/python3
 class Node:
-    """Define a Node of a single linked list"""
+    """
+    Define a Node of a single linked list
+    """
 
     def __init__(self, data, next_node=None):
-        """Method to initializate a Node object"""
+        """
+        Method to initializate a Node object
+        """
 
         self.__data = data
         self.__next_node = next_node
 
     @property
     def data(self):
-        """ method to getter data"""
+        """
+        method to getter data
+        """
 
         return self.__data
 
     @data.setter
     def data(self, value):
-        """method to setter data """
+        """
+        method to setter data
+        """
 
         error = "data must be an integer"
         if data != int:
@@ -25,13 +33,17 @@ class Node:
 
     @property
     def next_node(self):
-        """method to getter next_node"""
+        """
+        method to getter next_node
+        """
 
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """method to setter next_node"""
+        """
+        method to setter next_node
+        """
 
         error1 = "next_node must be a Node object"
         if value is not None and type(value) is not Node:
@@ -40,15 +52,21 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Defining a class single linked list"""
+    """
+    Defining a class single linked list
+    """
 
     def __init__(self):
-        """Method to initializate a SLL, starts empty"""
+        """
+        Method to initializate a SLL, starts empty
+        """
 
         self.__head = None
 
     def __str__(self):
-        """Return list of Nodes"""
+        """
+        Return list of Nodes
+        """
 
         NNode = self.__head
         List = []
@@ -59,7 +77,9 @@ class SinglyLinkedList:
         return("\n".join(List))
 
     def sorted_insert(self, value):
-        """Insert a new node in numerical orden"""
+        """
+        Insert a new node in numerical orden
+        """
 
         NNode = self.__head
         error2 = "data must be an integer"
