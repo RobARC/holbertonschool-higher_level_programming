@@ -11,7 +11,7 @@ def matrix_divided(matrix, div):
     if type(matrix) != list:
         raise TypeError(Error_string)
 
-    if len(matrix) < 2:
+    if len(matrix) < 1:
         raise TypeError(Error_string)
 
     if not (all(isinstance(element, list) for element in matrix)):
