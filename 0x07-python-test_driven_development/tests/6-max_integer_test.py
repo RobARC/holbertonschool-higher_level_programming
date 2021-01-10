@@ -27,6 +27,15 @@ class TestFunctionMaxInteger(unittest.TestCase):
         # One negative integer
         self.assertEqual(max_integer([-3]), -3)
 
+        # Max at the begin
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+
+        # Max in the middle
+        self.assertEqual(max_integer([1, 2, 3, 4, 3, 2, 1]), 4)
+
+        # List Empty
+        self.assertEqual(max_integer([]), None)
+
     def test_float_num(self):
         # Positive Float Numbers
         self.assertEqual(max_integer([1.8, 2.24, 3.35, 4.4]), 4.4)
