@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""This module create a Rectangle"""
 
 
 class Rectangle:
-    """Rectangle class"""
+    """This class define a Rectangle object"""
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
+        """Method init inicialize objects"""
+        self.height = height
+        self.width = width
 
     def area(self):
         area = self.__width * self.__height
@@ -19,8 +20,7 @@ class Rectangle:
     @property
     def height(self):
         """getter method, return private height"""
-
-        return (self.height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -34,8 +34,7 @@ class Rectangle:
     @property
     def width(self):
         """getter method, return private width"""
-
-        return (self.width)
+        return self.__width
 
     @width.setter
     def width(self, value):
