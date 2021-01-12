@@ -5,17 +5,9 @@
 class Rectangle:
     """This class define a Rectangle object"""
     def __init__(self, width=0, height=0):
-        """Method init inicialize objects"""
+        """Method init initialize objects"""
         self.height = height
         self.width = width
-
-    def area(self):
-        area = self.__width * self.__height
-        return area
-
-    def perimeter(self):
-        perimeter = 2 * (self.__width + self.__height)
-        return perimeter
 
     @property
     def height(self):
@@ -44,3 +36,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    def area(self):
+        """Return rectangle area"""
+        area = self.__width * self.__height
+        return area
+
+    def perimeter(self):
+        """Return rectangle perimeter"""
+        perimeter = 2 * (self.__width + self.__height)
+        return perimeter
