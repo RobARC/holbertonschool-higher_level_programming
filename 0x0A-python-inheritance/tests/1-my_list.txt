@@ -1,0 +1,35 @@
+>>> my_list = __import__('1-my_list').MyList
+
+1.Check that the file is executable
+>>> import os
+>>> os.access('1-my_list.py', os.X_OK)
+True
+
+2.Check coments of the functions
+
+>>> len(__import__("1-my_list").__doc__) > 10
+True
+
+3.Check for the documentation of the function
+
+>>> len(__import__("1-my_list").MyList.__doc__) > 10
+True
+
+4.Check for a newline at the end of the file
+>>> os.popen("cat -e 1-my_list.py | tail -1").read()[-1]
+'\n'
+
+5.Check for pep8 style
+>>> os.popen("pep8 1-my_list.py").read()
+''
+
+>>> os.popen("cat 1-my_list.py | head -1").read()
+'#!/usr/bin/python3\n'
+
+19.README
+
+>>> readme = os.getcwd()
+>>> readme1 = readme + '/README.md'
+>>> os.path.exists(readme1)
+True
+
