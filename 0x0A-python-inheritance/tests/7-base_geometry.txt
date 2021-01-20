@@ -2,23 +2,23 @@
 
 1.Check that the file is executable
 >>> import os
->>> os.access('7-base_geomtry.py', os.X_OK)
+>>> os.access('7-base_geometry.py', os.X_OK)
 True
 
 3.Check for the documentation of the function
 
->>> len(__import__("7-base_geomtry").MyList.__doc__) > 10
+>>> len(__import__("7-base_geometry").BaseGeometry.__doc__) > 10
 True
 
 4.Check for a newline at the end of the file
->>> os.popen("cat -e 7-base_geomtry.py | tail -1").read()[-1]
+>>> os.popen("cat -e 7-base_geometry.py | tail -1").read()[-1]
 '\n'
 
 5.Check for pep8 style
->>> os.popen("pep8 7-base_geomtry.py").read()
+>>> os.popen("pep8 7-base_geometry.py").read()
 ''
 
->>> os.popen("cat 7-base_geomtry.py | head -1").read()
+>>> os.popen("cat 7-base_geometry.py | head -1").read()
 '#!/usr/bin/python3\n'
 
 19.README
