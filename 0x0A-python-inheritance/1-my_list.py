@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Modulo class MyList"""
+
+
 class MyList(list):
     """ class MyList"""
 
