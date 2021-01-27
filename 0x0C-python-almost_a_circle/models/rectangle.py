@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """module retangle"""
-
 from models.base import Base
- 
+
+
 class Rectangle(Base):
     """Class Rectangle"""
 
@@ -15,7 +15,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -30,6 +29,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be > 0")
+
     @property
     def height(self):
         """getter  height"""
@@ -38,11 +38,12 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """setter height"""
-        self.__height= height
+        self.__height = height
         if type(height) is not int:
-            raise TypeError("heigth mus be an integer")
+            raise TypeError("heigtht mus be an integer")
         if height < 0:
-            raise ValueError("heigth must be > 0")
+            raise ValueError("height must be > 0")
+
     @property
     def x(self):
         """getter  x"""
@@ -56,6 +57,7 @@ class Rectangle(Base):
         self.__x = x
         if x < 0:
             raise ValueError("x must be >= 0")
+
     @property
     def y(self):
         """getter  y"""
@@ -75,25 +77,35 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        
+
             for b in range(self.y):
                 print()
-            
+
             c = '#'
             for a in range(self.height):
-              
-                    print(" " * self.x, end="")
-                    print(c * self.width)
+                print(" " * self.x, end="")
+                print(c * self.width)
 
     def __str__(self):
         """[Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        mystr = "[Rectangle] ({}) {}/{} - {}/{}"
+        return mystr.format(self.id, self.x, self.y, self.width, self.height)
 
-        return "[Rentangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+    def update(self, *args, **kwargs):
+        mylist = ['id', 'width', 'height', 'x', 'y']
+        if args:
+            for a, b in zip(mylist, args):
+                #zip() It takes two or more sequences and creates
+                #a new sequence of tuples Each tuple contains one
+                #element from each list
+                setattr(self, a, b)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in mylist:
+                    setattr(self, key, value)
 
-    def update(self, *args):
-    
-        mylist = [id, width, heigth, 
-        
-        for self in args:
-            self.__init__('args')
-    
+    def to_dictionary(self):
+        "method dictionary"
+        mydict = {'id': self.id, 'width': self.width, 'height': self.height,
+                  'x': self.x, 'y': self.y}
+        return mydict
