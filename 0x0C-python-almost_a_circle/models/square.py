@@ -24,7 +24,6 @@ class Square(Rectangle):
         """metodo setter from size"""
         self.width = value
         self.height = value
-        
 
     def __str__(self):
         """[Square] (<id>) <x>/<y> - <size> """
