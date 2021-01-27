@@ -9,6 +9,7 @@ from unittest.mock import patch
 from io import StringIO
 import fileinput
 
+
 class TestRectangle(unittest.TestCase):
     """Test class for Rectangle class instantiation tests"""
 
@@ -26,7 +27,7 @@ class TestRectangle(unittest.TestCase):
     def test_readme(self):
         """tests README file"""
         readme = os.getcwd()
-        readme1 = readme +'/README.md'
+        readme1 = readme + '/README.md'
         readme2 = os.path.exists(readme1)
         self.assertEqual(readme2, True)
 
@@ -40,10 +41,10 @@ class TestRectangle(unittest.TestCase):
     def test_sheban(self):
         """tests sheban """
         path1 = os.getcwd()
-        filename1 = path1 +'/models/base.py'
+        filename1 = path1 + '/models/base.py'
         expected = ''
         print(filename1)
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             send_cmd = os.system('pep8 filename1')
             self.assertEqual(fake_out.getvalue(), expected)
 
@@ -76,33 +77,33 @@ class TestRectangle(unittest.TestCase):
         """tests file main 4"""
         output1 = "####\n####\n####\n####\n####\n####\n"
         r1 = Rectangle(4, 6)
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             r1.display()
-            self.assertEqual(fake_out.getvalue(), output1)  
+            self.assertEqual(fake_out.getvalue(), output1)
 
         output2 = "##\n##\n"
         r1 = Rectangle(2, 2)
-        with patch('sys.stdout', new = StringIO()) as fake_out:
-           r1.display()
-           self.assertEqual(fake_out.getvalue(), output2)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r1.display()
+            self.assertEqual(fake_out.getvalue(), output2)
 
     def test_cases_main5(self):
         """tests file main 5"""
         r1 = Rectangle(4, 6, 2, 1, 12)
-        expected = "[Rectangle] (12) 2/1 - 4/6" 
+        expected = "[Rectangle] (12) 2/1 - 4/6"
         self.assertEqual(str(r1), expected)
-        
-        output =  "[Rectangle] (12) 2/1 - 4/6\n"
-        with patch("sys.stdout", new = StringIO()) as fake_out:
+
+        output = "[Rectangle] (12) 2/1 - 4/6\n"
+        with patch("sys.stdout", new=StringIO()) as fake_out:
             print(r1)
             self.assertEqual(fake_out.getvalue(), output)
 
         r2 = Rectangle(5, 5, 1)
         expected = "[Rectangle] (1) 1/0 - 5/5"
         self.assertEqual(str(r2), expected)
-        
+
         output1 = "[Rectangle] (1) 1/0 - 5/5\n"
-        with patch("sys.stdout", new = StringIO()) as fake_out:
+        with patch("sys.stdout", new=StringIO()) as fake_out:
             print(r2)
             self.assertEqual(fake_out.getvalue(), output1)
 
@@ -110,28 +111,28 @@ class TestRectangle(unittest.TestCase):
         """tests file main 6"""
         output0 = "\n\n  ##\n  ##\n  ##\n"
         r1 = Rectangle(2, 3, 2, 2)
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             r1.display()
             self.assertEqual(fake_out.getvalue(), output0)
 
         output0 = " ###\n ###\n"
         r1 = Rectangle(3, 2, 1, 0)
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             r1.display()
             self.assertEqual(fake_out.getvalue(), output0)
 
     def test_cases_main7(self):
         """tests file main 7"""
         r1 = Rectangle(10, 10, 10, 10)
-        expected = "[Rectangle] (1) 10/10 - 10/10" 
+        expected = "[Rectangle] (1) 10/10 - 10/10"
         self.assertEqual(str(r1), expected)
 
         r1.update(89)
-        expected = "[Rectangle] (89) 10/10 - 10/10" 
+        expected = "[Rectangle] (89) 10/10 - 10/10"
         self.assertEqual(str(r1), expected)
-        
+
         r1.update(89, 2)
-        expected = "[Rectangle] (89) 10/10 - 2/10" 
+        expected = "[Rectangle] (89) 10/10 - 2/10"
         self.assertEqual(str(r1), expected)
 
         r1.update(89, 2, 3)
@@ -149,9 +150,9 @@ class TestRectangle(unittest.TestCase):
     def test_cases_main8(self):
         """tests file main 8"""
         r1 = Rectangle(10, 10, 10, 10)
-        expected = "[Rectangle] (1) 10/10 - 10/10" 
+        expected = "[Rectangle] (1) 10/10 - 10/10"
         self.assertEqual(str(r1), expected)
-        
+
         r1.update(height=1)
         expected = "[Rectangle] (1) 10/10 - 10/1"
         self.assertEqual(str(r1), expected)
@@ -165,7 +166,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r1), expected)
 
         r1.update(x=1, height=2, y=3, width=4)
-        expected = "[Rectangle] (89) 1/3 - 4/2" 
+        expected = "[Rectangle] (89) 1/3 - 4/2"
         self.assertEqual(str(r1), expected)
 
     def test_cases_main9(self):
@@ -175,15 +176,15 @@ class TestRectangle(unittest.TestCase):
         expected1 = '25\n'
         expected2 = "#####\n#####\n#####\n#####\n#####\n"
 
-        with patch("sys.stdout", new = StringIO()) as fake_out:
+        with patch("sys.stdout", new=StringIO()) as fake_out:
             print(s1)
             self.assertEqual(fake_out.getvalue(), expected)
-        
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             print(s1.area())
             self.assertEqual(fake_out.getvalue(), expected1)
 
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             s1.display()
             self.assertEqual(fake_out.getvalue(), expected2)
 
@@ -192,19 +193,18 @@ class TestRectangle(unittest.TestCase):
         expected1 = '25\n'
         expected2 = "#####\n#####\n#####\n#####\n#####\n"
 
-        with patch("sys.stdout", new = StringIO()) as fake_out:
+        with patch("sys.stdout", new=StringIO()) as fake_out:
             print(s1)
             self.assertEqual(fake_out.getvalue(), expected)
-        
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             print(s1.area())
             self.assertEqual(fake_out.getvalue(), expected1)
 
-        with patch('sys.stdout', new = StringIO()) as fake_out:
+        with patch('sys.stdout', new=StringIO()) as fake_out:
             s1.display()
             self.assertEqual(fake_out.getvalue(), expected2)
 
-    
     def test_instance_class(self):
         """Checks for a instance of the class
         """
@@ -216,7 +216,7 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 5)
         self.assertTrue(type(r1) == type(r2))
         self.assertFalse(id(r1) == id(r2))
-            
+
     def tearDown(self):
         Base._Base__nb_objects = 0
 

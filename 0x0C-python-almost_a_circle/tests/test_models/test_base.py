@@ -10,6 +10,7 @@ from models.square import Square
 from unittest.mock import patch
 from io import StringIO
 
+
 class TestBase(unittest.TestCase):
     """
     Define a Class to test all diferent cases in
@@ -101,7 +102,7 @@ class TestBase(unittest.TestCase):
         self.assertTrue(isinstance(d, dict))
         self.assertTrue(isinstance(json_d, str))
         self.assertCountEqual(
-        json_d, '{["id": 1, "x": 2, "y": 3, "width": 4, "height": 5]}')
+            json_d, '{["id": 1, "x": 2, "y": 3, "width": 4, "height": 5]}')
         json_d_1 = Base.to_json_string(None)
         self.assertEqual(json_d_1, "[]")
         text = "to_json_string() missing 1 required positional argument: "
