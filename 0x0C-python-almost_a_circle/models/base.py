@@ -37,14 +37,13 @@ class Base:
             with open(filename, 'w') as f:
                 f.write(mylist)
         else:
-            with open(filename, 'w') as f:
-
-                for objects in list_objs:
-                    mydic2 = cls.to_dictionary(objects)
-                    mylist.append(mydic2)
-                mydict = cls.to_json_string(mylist)
-                f.write(mydict)
-
+            for objects in list_objs:
+                mydic2 = cls.to_dictionary(objects)
+                mylist.append(mydic2)
+             mydict = cls.to_json_string(mylist)
+             f.write(mydict)
+        with open(filename, 'w') as f:
+    
     @staticmethod
     def from_json_string(json_string):
         """method that returns the list of the JSON string"""
