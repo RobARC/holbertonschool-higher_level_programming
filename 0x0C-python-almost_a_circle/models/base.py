@@ -34,10 +34,10 @@ class Base:
         mylist = []
 
         if list_objs is None:
-            with open(filename, 'w', encoding='utf-8') as f:
+            with open(filename, 'w') as f:
                 f.write(mylist)
         else:
-            with open(filename, 'w', encoding='utf-8') as f:
+            with open(filename, 'w') as f:
 
                 for objects in list_objs:
                     mydic2 = cls.to_dictionary(objects)
