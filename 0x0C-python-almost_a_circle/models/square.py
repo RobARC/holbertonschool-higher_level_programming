@@ -17,14 +17,14 @@ class Square(Rectangle):
     @property
     def size(self):
         """ methode getter from size"""
-        return self.__size
+        return self._width
 
     @size.setter
     def size(self, value):
         """metodo setter from size"""
         self.width = value
         self.height = value
-        self.__size = value
+        
 
     def __str__(self):
         """[Square] (<id>) <x>/<y> - <size> """
