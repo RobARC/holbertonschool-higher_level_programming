@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""module retangle"""
+"""module retangle that inherits from base"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Class Rectangle"""
+    """Class Rectangle that inherits from class Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ method init"""
+        """ method init class constructor"""
 
         super().__init__(id)
 
@@ -18,12 +18,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """getter width"""
+        """method privated getter width of Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, width):
-        """setter width"""
+        """Method privated setter width of Rectangle"""
         self.__width = width
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -32,12 +32,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """getter  height"""
+        """Method Privated getter  height of Rectangle"""
         return self.__height
 
     @height.setter
     def height(self, height):
-        """setter height"""
+        """Method Privated setter height of Rectagle"""
         self.__height = height
         if type(height) is not int:
             raise TypeError("heigtht mus be an integer")
@@ -46,12 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter  x"""
+        """Metod Privated getter  x of Rectangle"""
         return self.__x
 
     @x.setter
     def x(self, x):
-        """setter x"""
+        """Method privated setter x of Rectangle"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         self.__x = x
@@ -60,12 +60,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """getter  y"""
+        """Method Privated getter  y of Rectangle"""
         return self.__y
 
     @y.setter
     def y(self, y):
-        """setter y"""
+        """Method privated setter y of Rectangle"""
         self.__y = y
         if type(y) is not int:
             raise TypeError("y must be an integer")
@@ -92,6 +92,10 @@ class Rectangle(Base):
         return mystr.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """ Metho update class Rectangle by overring 
+        __str__ method tha return
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
         mylist = ['id', 'width', 'height', 'x', 'y']
         if args:
             for a, b in zip(mylist, args):
@@ -105,7 +109,9 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        "method dictionary"
+        """method dictionary return the dictionary
+        of a Rectangle
+        """
         mydict = {'id': self.id, 'width': self.width, 'height': self.height,
                   'x': self.x, 'y': self.y}
         return mydict
