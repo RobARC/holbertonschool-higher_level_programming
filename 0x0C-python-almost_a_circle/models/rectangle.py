@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""module retangle that inherits from base"""
+"""module retangle that inherits from base privated instance attributes"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Class Rectangle that inherits from class Base"""
+    """Class Rectangle that inherits from Base privates instances attributes"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ method init class constructor"""
