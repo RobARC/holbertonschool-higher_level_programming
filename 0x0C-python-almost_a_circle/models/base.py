@@ -75,3 +75,5 @@ class Base:
         except FileNotFoundError:
             return mylist
         return mylist
+
+   #def save_to_file_csv(cls, list_objs)
