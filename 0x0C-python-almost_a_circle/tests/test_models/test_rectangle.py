@@ -30,6 +30,12 @@ class TestRectangle(unittest.TestCase):
         readme2 = os.path.exists(readme1)
         self.assertEqual(readme2, True)
 
+    def test_pep8(self):
+        case = '\n'
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            with os.popen("pep8 models/base.py") as cmd:
+                print(cmd.read())
+            self.assertEqual(fake_out.getvalue(), case)
 
     def test_sheban(self):
         """tests sheban """
