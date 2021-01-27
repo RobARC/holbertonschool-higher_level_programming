@@ -99,9 +99,9 @@ class Rectangle(Base):
         mylist = ['id', 'width', 'height', 'x', 'y']
         if args:
             for a, b in zip(mylist, args):
-                #zip() It takes two or more sequences and creates
-                #a new sequence of tuples Each tuple contains one
-                #element from each list
+                # zip() It takes two or more sequences and creates
+                # a new sequence of tuples Each tuple contains one
+                # element from each list
                 setattr(self, a, b)
         elif kwargs:
             for key, value in kwargs.items():
