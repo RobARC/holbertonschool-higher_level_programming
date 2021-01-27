@@ -31,7 +31,7 @@ class Base:
         """method Json string to a file"""
 
         filename = cls.__name__ + ".json"
-        mylist = [""]
+        mylist = []
 
         if list_objs is None:
             with open(filename, 'w') as f:
