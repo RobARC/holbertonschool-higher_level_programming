@@ -92,7 +92,7 @@ class Rectangle(Base):
         return mystr.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """ Metho update class Rectangle by overring 
+        """ Metho update class Rectangle by overring
         __str__ method tha return
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
