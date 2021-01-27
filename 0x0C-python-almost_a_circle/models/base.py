@@ -37,6 +37,7 @@ class Base:
             with open(filename, 'w') as f:
                 f.write(mylist)
         else:
+            mylist = []
             for objects in list_objs:
                 mydic2 = cls.to_dictionary(objects)
                 mylist.append(mydic2)
