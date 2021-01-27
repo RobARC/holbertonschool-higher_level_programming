@@ -7,6 +7,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase(unittest.TestCase):
     """
     Define a Class to test all diferent cases in
@@ -24,8 +25,15 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 12)
         self.assertEqual(b5.id, 4)
 
-    def test_cases_main2(self):
+    def test_readme(self):
+        """tests README file"""
+        readme = os.getcwd()
+        readme1 = readme + '/README.md'
+        readme2 = os.path.exists(readme1)
+        self.assertEqual(readme2, True)
 
+    def test_cases_main2(self):
+        """tests main2 file"""
         with self.assertRaises(TypeError):
             Rectangle(10, "2")
         with self.assertRaises(ValueError):
@@ -36,7 +44,7 @@ class TestBase(unittest.TestCase):
             r.x = {}
         with self.assertRaises(ValueError):
             Rectangle(10, 2, 3, -1)
-    
+
     def test_cases_main3(self):
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
@@ -87,21 +95,19 @@ class TestBase(unittest.TestCase):
         json_d, '{["id": 1, "x": 2, "y": 3, "width": 4, "height": 5]}')
         json_d_1 = Base.to_json_string(None)
         self.assertEqual(json_d_1, "[]")
-        err = ("to_json_string() missing 1 required positional argument: " +
-        "'list_dictionaries'")
+        text = "to_json_string() missing 1 required positional argument: "
+        err = (text + "'list_dictionaries'")
         with self.assertRaises(TypeError) as e:
             Base.to_json_string()
             self.assertEqual(err, str(e.exception))
-            err = "to_json_string() takes 1 positional argument but 2 were given"
+            err = "to_json_string() takes 1"
+            err1 = err + "positional argument but 2 were given"
         with self.assertRaises(TypeError) as e:
             Base.to_json_string([{1, 2}], [{3, 4}])
-            self.assertEqual(err, str(e.exception))
-
+            self.assertEqual(err1, str(e.exception))
 
     def tearDown(self):
         Base._Base__nb_objects = 0
 
 if __name__ == '__main__':
     unittest.main()
-
-
