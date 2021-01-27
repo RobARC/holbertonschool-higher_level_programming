@@ -113,3 +113,5 @@ class Rectangle(Base):
         mydict = {'id': self.id, 'width': self.width, 'height': self.height,
                   'x': self.x, 'y': self.y}
         return mydict
+
+    # def save_to_file_csv(cls, list_objs):
