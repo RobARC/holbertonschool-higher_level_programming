@@ -41,8 +41,9 @@ class Base:
                 mydic2 = cls.to_dictionary(objects)
                 mylist.append(mydic2)
              mydict = cls.to_json_string(mylist)
-        with open(filename, 'w') as f:
-             f.write(mydict)
+             with open(filename, 'w') as f:
+                f.write(mydict)
+                
     @staticmethod
     def from_json_string(json_string):
         """method that returns the list of the JSON string"""
