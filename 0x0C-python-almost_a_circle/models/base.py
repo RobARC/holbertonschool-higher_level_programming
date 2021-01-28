@@ -38,11 +38,11 @@ class Base:
                 f.write(mylist)
         else:
             mylist = []
-            for objects in list_objs:
-                mydic2 = cls.to_dictionary(objects)
-                mylist.append(mydic2)
-             mydict = cls.to_json_string(mylist)
-             with open(filename, 'w') as f:
+            with open(filename, 'w') as f:
+                for objects in list_objs:
+                    mydic2 = cls.to_dictionary(objects)
+                    mylist.append(mydic2)
+                mydict = cls.to_json_string(mylist)
                 f.write(mydict)
                 
     @staticmethod
