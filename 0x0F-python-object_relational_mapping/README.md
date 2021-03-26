@@ -14,18 +14,18 @@ The biggest difference is: no more SQL queries! Indeed, the purpose of an ORM is
 # Resources
 <b>Read or watch:</b>
 
-<li>[Object-relational mappers](https://intranet.hbtn.io/rltoken/IqdjUaZ31ZfP6eT-lTyUkA)</li>
-<li>[mysqlclient/MySQLdb documentation](https://intranet.hbtn.io/rltoken/rMJpVJ1_YjMWfvY00I7Kpw)</li (please don’t pay attention to _mysql)>
-<li>[MySQLdb tutorials](https://intranet.hbtn.io/rltoken/DJz5W6Y13-6qUSTPTGrHYw)</li> 
-<li>[SQLAlchemy tutorials](https://intranet.hbtn.io/rltoken/9JWveMwNKe3IUErdEbDsUQ)</li> 
-<li>[SQLAlchemys](https://intranet.hbtn.io/rltoken/E9dLS6Shaezq4ivnGxN_RA)</li>
-<li>[mysqlclient/MySQLdbs](https://intranet.hbtn.io/rltoken/QFgtVxz2w-C1y1OB8uls1g)</li> 
-<li>[Introduction to SQLAlchemys](https://intranet.hbtn.io/rltoken/I5bvhPGTOu3_-T-4jpN-hg)</li> 
-<li>[Flask SQLAlchemys](https://intranet.hbtn.io/rltoken/UvaHESHeqlRA0Z0uQFi0_A)</li> 
-<li>[10 common stumbling blocks for SQLAlchemy newbiess](https://intranet.hbtn.io/rltoken/Zb8Yc2WycLLYX8gnLlwZKw)</li> 
-<li>[Python SQLAlchemy Cheatsheets](https://intranet.hbtn.io/rltoken/XHPAX7-ydSou2BLWHII8Vw)</li> 
-<li>[SQLAlchemy ORM Tutorial for Python Developers](https://intranet.hbtn.io/rltoken/aeLSQ039BhLhamU2BjqsOw) (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)</li> 
-<li>[SQLAlchemy Tutorials](https://intranet.hbtn.io/rltoken/cmfi9C_nRXrmnwaJfCPyxA)</li>
+[Object-relational mappers](https://intranet.hbtn.io/rltoken/IqdjUaZ31ZfP6eT-lTyUkA)
+[mysqlclient/MySQLdb documentation](https://intranet.hbtn.io/rltoken/rMJpVJ1_YjMWfvY00I7Kpw) /*(please don’t pay attention to _mysql)*/
+[MySQLdb tutorials](https://intranet.hbtn.io/rltoken/DJz5W6Y13-6qUSTPTGrHYw)
+[SQLAlchemy tutorials](https://intranet.hbtn.io/rltoken/9JWveMwNKe3IUErdEbDsUQ) 
+[SQLAlchemys](https://intranet.hbtn.io/rltoken/E9dLS6Shaezq4ivnGxN_RA)
+[mysqlclient/MySQLdbs](https://intranet.hbtn.io/rltoken/QFgtVxz2w-C1y1OB8uls1g) 
+[Introduction to SQLAlchemys](https://intranet.hbtn.io/rltoken/I5bvhPGTOu3_-T-4jpN-hg) 
+[Flask SQLAlchemys](https://intranet.hbtn.io/rltoken/UvaHESHeqlRA0Z0uQFi0_A) 
+[10 common stumbling blocks for SQLAlchemy newbiess](https://intranet.hbtn.io/rltoken/Zb8Yc2WycLLYX8gnLlwZKw)
+[Python SQLAlchemy Cheatsheets](https://intranet.hbtn.io/rltoken/XHPAX7-ydSou2BLWHII8Vw)
+[SQLAlchemy ORM Tutorial for Python Developers](https://intranet.hbtn.io/rltoken/aeLSQ039BhLhamU2BjqsOw) (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)
+[SQLAlchemy Tutorials](https://intranet.hbtn.io/rltoken/cmfi9C_nRXrmnwaJfCPyxA)
 
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
