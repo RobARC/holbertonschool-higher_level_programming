@@ -28,7 +28,7 @@ def main():
     if states:
         print('{}'.format(states.id))
     else:
-        print('not found')
+        print('Not found')
 
     session.close()
 
