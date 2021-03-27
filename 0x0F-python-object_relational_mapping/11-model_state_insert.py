@@ -22,7 +22,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = State(name='Lousiana')
+    state = State(name='Louisiana')
 
     session.add(state)
     session.commit()
