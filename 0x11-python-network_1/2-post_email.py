@@ -10,10 +10,12 @@ from sys import argv
 
 
 def main(argv):
-    """ method that take a url and an email as argument and print email adress """
-    
+    """ method that take a url and an email as argument
+    and print email adress
+    """
+
     url = argv[1]
-    email = {'email':argv[2]}
+    email = {'email': argv[2]}
     data = urlencode(email)
     data = data.encode('utf8')
     req = request.Request(url, data)
