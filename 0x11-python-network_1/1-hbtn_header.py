@@ -12,7 +12,7 @@ def main(argv):
     """ method that take a url as argument and print like id """
 
     url = argv
-    with r.equest.urlopen(url) as r:
+    with request.urlopen(url) as r:
         headers = r.info()
         print(headers['X-Request-Id'])
 
