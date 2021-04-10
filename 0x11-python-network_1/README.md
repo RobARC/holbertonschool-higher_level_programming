@@ -3,10 +3,11 @@
 ## Resources
 <b>Read or watch:</b>
 
-<li>[Quickstart with Requests package](https://intranet.hbtn.io/rltoken/mJaq5ekXQ__0ZvNVIgRTFg)
-<li>[Requests package](https://intranet.hbtn.io/rltoken/f6ZTT1E36n9lUGGhdjSjfQ)
+#### <li>[Quickstart with Requests package](https://intranet.hbtn.io/rltoken/mJaq5ekXQ__0ZvNVIgRTFg)
+#### <li>[Requests package](https://intranet.hbtn.io/rltoken/f6ZTT1E36n9lUGGhdjSjfQ)
 
- <li>Learning Objectives</li>
+## Learning Objectives
+
  <li>How to fetch internet resources with the Python package urllib</li>
  
  <li>How to decode urllib body response</li>
