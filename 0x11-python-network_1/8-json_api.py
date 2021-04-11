@@ -8,9 +8,9 @@ from sys import argv
 
 
 def main(argv):
-"""  script that takes in a letter and sends a POST request to
-    http://0.0.0.0:5000/search_user with the letter as a parameter.
-"""
+    """  script that takes in a letter and sends a POST request to
+        http://0.0.0.0:5000/search_user with the letter as a paramete
+    """
 
     url = 'http://f1859af609d9.b380b380.hbtn-cod.io:5000/search_user'
 
