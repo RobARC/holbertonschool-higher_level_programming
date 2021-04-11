@@ -28,7 +28,7 @@ def main(argv):
         else:
             print("No result")
     except:
-            print("Not a valid JSON")
+            print("not a JSON")
 
 
 if __name__ == "__main__":
