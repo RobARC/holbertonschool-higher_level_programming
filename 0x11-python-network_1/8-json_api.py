@@ -24,7 +24,7 @@ def main(argv):
             print("[{}] {}".format(response['id'], response['name']))
         else:
             print("No result")
-    except ValueError:
+    except:
             print("Not a valid JSON")
 
 
