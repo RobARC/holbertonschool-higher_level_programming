@@ -23,12 +23,12 @@ def main(argv):
     req = requests.post(url, data=payload)
     try:
         response = req.json()
-        if bool(response):
+        if bool(response) is True:
             print("[{}] {}".format(response['id'], response['name']))
         else:
             print("No result")
     except:
-            print("not a JSON")
+            print("Not a valid JSON")
 
 
 if __name__ == "__main__":
