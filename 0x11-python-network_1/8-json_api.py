@@ -9,7 +9,7 @@ from sys import argv
 
 def main(argv):
 
-    url = 'http://f1859af609d9.b380b380.hbtn-cod.io:5000/search_user'
+   url = 'http://0.0.0.0:5000/search_user'
 
     if len(argv) < 2:
         q = ""
